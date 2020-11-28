@@ -10,7 +10,7 @@ class QuestionViewSet(viewsets.ModelViewSet):
 
 
 class PollViewSet(viewsets.ModelViewSet):
-    queryset = models.Poll.objects.all()
+    queryset = models.Poll.objects.filter(is_active=True, )
     serializer_class = serializers.PollSerializer
 
 
